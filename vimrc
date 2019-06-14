@@ -18,11 +18,19 @@ Plug 'jalvesaq/Nvim-R'
 Plug 'davidhalter/jedi-vim'
 Plug 'patstockwell/vim-monokai-tasty'
 Plug 'elzr/vim-json'
+Plug 'itchyny/lightline.vim'
+
 
 " To install the plugins in the list above execute :PlugInstall
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
+
+" SET LEADER
+" With a map leader it's possible to do extra key combinations
+" like <leader>w saves the current file
+let mapleader = ","
+let g:mapleader = ","
 
 " Settings related to external plugins
 " vim-monokai-tasty
@@ -30,13 +38,10 @@ let g:vim_monokai_tasty_italic = 1
 colorscheme vim-monokai-tasty
 
 " NERD Tree
-autocmd vimenter * NERDTree " Always open nerdtree
+"autocmd vimenter * NERDTree " Always open nerdtree
+map <leader>nn :NERDTreeToggle<CR>
 
-" SET LEADER
-" With a map leader it's possible to do extra key combinations
-" like <leader>w saves the current file
-let mapleader = ","
-let g:mapleader = ","
+
 
 " Line Numbers
 set number              " Switch the line numbers on.
