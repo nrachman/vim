@@ -41,6 +41,11 @@ colorscheme vim-monokai-tasty
 "autocmd vimenter * NERDTree " Always open nerdtree
 map <leader>nn :NERDTreeToggle<CR>
 
+" Light line
+set laststatus=2
+let g:lightline = {
+      \ 'colorscheme': 'jellybeans',
+      \ }
 
 
 " Line Numbers
