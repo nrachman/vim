@@ -56,15 +56,13 @@ set history=500
 
 " Enable Filetype Plugins
 filetype plugin on
-filetype indent on
+filetype plugin indent on
 
 " Indentation
 set wrap
 set expandtab           " Enter spaces when tab is pressed.
 set smarttab            " Use smart tabs.
 set textwidth=80        " Break lines when line length increases.
-set tabstop=4           " Use 4 spaces to represent tab.
-set softtabstop=4
 set autoindent          " Copy indent from current line when starting a new
                         " line.
 set si                  " Smart indent.
