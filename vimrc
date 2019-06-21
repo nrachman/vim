@@ -149,9 +149,9 @@ set noswapfile
 map <leader>tnew :tabnew<cr>
 map <leader>to :tabonly<cr>
 map <leader>tc :tabclose<cr>
-map <leader>tm :tabmove
-map <leader>tn :tabn
-map <leader>tp :tabp
+map <leader>tm :tabmove<cr>
+map <leader>tn :tabn<cr>
+map <leader>tp :tabp<cr>
 
 " Return to last edit position when opening files (You want this!)
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
