@@ -13,6 +13,21 @@ vi .vimrc
 :PlugInstall
 ```
 
+## Setup Neovim
+If vim is already configured as mentioned above then simply copy .vimrc file as
+init.vim to ~/.config/nvim directory.
+
+```
+cp ~/.vimrc ~/.config/nvim/init.vim
+```
+
+### Install vim-plug Plugin Manager in Neovim
+```
+dest=~/.local/share/nvim/site/autoload/plug.vim
+mkdir -p $(dirname $dest)
+wget -O - https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim > $dest
+```
+
 ## Plugins Installed
 
 * [The NERDTree](https://github.com/scrooloose/nerdtree)
@@ -23,3 +38,16 @@ vi .vimrc
 * [lightline.vim](https://github.com/itchyny/lightline.vim)
 
 **Note: For vim and plugin usage read [https://github.com/rohitfarmer/vim/wiki](https://github.com/rohitfarmer/vim/wiki)**
+
+# Install Latest Version of NeoVIM on Raspberry Pi
+```
+sudo apt-get install libtool libtool-bin autoconf automake cmake g++ pkg-config unzip gettext
+
+git clone https://github.com/neovim/neovim.git
+cd neovim
+git checkout stable
+make CMAKE_BUILD_TYPE=RelWithDebInfo
+sudo make install
+
+nvim is installed at /usr/local/bin/ 
+```
