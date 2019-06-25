@@ -15,11 +15,13 @@ call plug#begin('~/.vim/plugged')
 " Github user/repository
 Plug 'scrooloose/nerdtree' 
 Plug 'jalvesaq/Nvim-R'
+Plug 'ncm2/ncm2'
+Plug 'gaalcaras/ncm-R'
 Plug 'davidhalter/jedi-vim'
 Plug 'patstockwell/vim-monokai-tasty'
 Plug 'elzr/vim-json'
 Plug 'itchyny/lightline.vim'
-
+Plug 'Raimondi/delimitMate'
 
 " To install the plugins in the list above execute :PlugInstall
 

@@ -36,6 +36,7 @@ wget -O - https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim > 
 * [vim-monokai-tasty](https://github.com/patstockwell/vim-monokai-tasty)
 * [Better JSON for VIM](https://github.com/elzr/vim-json)
 * [lightline.vim](https://github.com/itchyny/lightline.vim)
+* [delimitMate](https://github.com/Raimondi/delimitMate/)
 
 **Note: For vim and plugin usage read [https://github.com/rohitfarmer/vim/wiki](https://github.com/rohitfarmer/vim/wiki)**
 
