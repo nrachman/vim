@@ -46,7 +46,8 @@ set laststatus=2
 let g:lightline = {
       \ 'colorscheme': 'jellybeans',
       \ }
-
+" Nvim-R
+set ma                  " Make a buffer modifiable
 
 " Line Numbers
 set number              " Switch the line numbers on.
