@@ -51,6 +51,11 @@ let g:lightline = {
 " Nvim-R
 set ma                  " Make a buffer modifiable
 
+" Snakemake
+au BufNewFile,BufRead Snakefile set syntax=snakemake
+au BufNewFile,BufRead *.snake set syntax=snakemake
+au BufNewFile,BufRead *.smk set syntax=snakemake
+
 " Line Numbers
 set number              " Switch the line numbers on.
 
@@ -82,7 +87,7 @@ set ruler
 set wildmenu
 set wildmode=list:longest,full
 
-set mouse=a             " Enable full mouse support in the console.
+" set mouse=a             " Enable full mouse support in the console.
                         " While selecting text with mouse it automatically
                         " enters in the visual mode. Use yy to copy and p to
                         " paste in the command mode.
