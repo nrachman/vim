@@ -85,7 +85,7 @@ set ruler
 set wildmenu
 set wildmode=list:longest,full
 
-set mouse=a             " Enable full mouse support in the console.
+set mouse=i             " Enable full mouse support in the console.
                         " While selecting text with mouse it automatically
                         " enters in the visual mode. Use yy to copy and p to
                         " paste in the command mode.
