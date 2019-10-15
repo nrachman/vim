@@ -1,5 +1,8 @@
 " Vimrc by Rohit Farmer
 
+" Vim documentation
+" http://vimdoc.sourceforge.net/vimum.html
+
 " PLUGIN MANAGER
 " For more information https://github.com/junegunn/vim-plug/wiki/tutorial
 if empty(glob('~/.vim/autoload/plug.vim'))
