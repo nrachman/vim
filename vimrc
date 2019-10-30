@@ -48,8 +48,10 @@ set laststatus=2
 let g:lightline = {
       \ 'colorscheme': 'jellybeans',
       \ }
+
 " Nvim-R
 set ma                  " Make a buffer modifiable
+let R_assign = 0        " Disable underscore assignment to <-
 
 " Snakemake
 au BufNewFile,BufRead Snakefile set syntax=snakemake
@@ -63,14 +65,14 @@ set number              " Switch the line numbers on.
 set history=500
 
 " Enable Filetype Plugins
-filetype plugin on
-filetype plugin indent on
+" filetype plugin on
+" filetype plugin indent on
 
 " Indentation
-set wrap
+" set wrap
 set expandtab           " Enter spaces when tab is pressed.
 set smarttab            " Use smart tabs.
-set textwidth=80        " Break lines when line length increases.
+" set textwidth=80        " Break lines when line length increases.
 set autoindent          " Copy indent from current line when starting a new
                         " line.
 set si                  " Smart indent.
