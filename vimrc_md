@@ -23,6 +23,7 @@ Plug 'itchyny/lightline.vim'
 Plug 'Raimondi/delimitMate'
 Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
+Plug 'StanAngeloff/php.vim'
 
 " To install the plugins in the list above execute :PlugInstall
 
