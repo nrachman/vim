@@ -3,30 +3,30 @@ Contains a vimrc file and autoload folder with [vim-plug](https://github.com/jun
 
 ## Setup
 
-```
-cd ~
-git clone https://github.com/rohitfarmer/vim.git .vim
-
-ln -s .vim/vimrc .vimrc
-
-vi .vimrc
-:PlugInstall
-```
-
-## Setup Neovim
-If vim is already configured as mentioned above then simply copy .vimrc file as
-init.vim to ~/.config/nvim directory.
-
-```
-cp ~/.vimrc ~/.config/nvim/init.vim
-```
-
-### Install vim-plug Plugin Manager in Neovim
+### Install vim-plug Plugin Manager for Neovim
 ```
 dest=~/.local/share/nvim/site/autoload/plug.vim
 mkdir -p $(dirname $dest)
 wget -O - https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim > $dest
 ```
+### Clone vim Repository and link Vimrc file
+```
+cd ~
+git clone https://github.com/rohitfarmer/vim.git .vim
+
+mkdir .config/nvim
+
+ln ~/.vim/vimrc ~/.config/nvim/init.vim
+```
+### Install Plugins
+```
+vim or nvim
+# if this is the first time then it should automatically install all the plugins.
+# else
+
+:PlugInstall
+```
+
 
 ## Plugins Installed
 
