@@ -160,4 +160,6 @@ map <leader>tp :tabp<cr>
 " Return to last edit position when opening files (You want this!)
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
+" For nvim-R so that can use R outside of other things. This will also allow me to automatically install nvimcom
+command RStart let oldft=&ft | set ft=r | exe 'set ft='.oldft | let b:IsInRCode = function("DefaultIsInRCode") | normal <LocalLeader>rf
 
