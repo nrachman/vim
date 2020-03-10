@@ -13,4 +13,4 @@ mkdir .config/nvim
 ln ~/.vim/vimrc ~/.config/nvim/init.vim
 
 #Install Plugins
-vim +'PlugInstall --sync' +qa
+nvim +'PlugInstall --sync' +qa
