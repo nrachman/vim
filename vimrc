@@ -161,5 +161,6 @@ map <leader>tp :tabp<cr>
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
 " For nvim-R so that can use R outside of other things. This will also allow me to automatically install nvimcom
+" see https://github.com/jalvesaq/Nvim-R/blob/master/doc/Nvim-R.txt and search Rstart
 command RStart let oldft=&ft | set ft=r | exe 'set ft='.oldft | let b:IsInRCode = function("DefaultIsInRCode") | normal <LocalLeader>rf
 
