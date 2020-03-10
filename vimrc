@@ -1,4 +1,4 @@
-" Vimrc by Rohit Farmer
+" Vimrc by Nicholas Rachmaninoff, forked from Vimrc by Rohit Farmer
 
 " PLUGIN MANAGER
 " For more information https://github.com/junegunn/vim-plug/wiki/tutorial
@@ -15,11 +15,7 @@ call plug#begin('~/.vim/plugged')
 " Github user/repository
 Plug 'scrooloose/nerdtree' 
 Plug 'jalvesaq/Nvim-R'
-Plug 'ncm2/ncm2'
-Plug 'gaalcaras/ncm-R'
 Plug 'davidhalter/jedi-vim'
-Plug 'patstockwell/vim-monokai-tasty'
-Plug 'elzr/vim-json'
 Plug 'itchyny/lightline.vim'
 Plug 'Raimondi/delimitMate'
 
