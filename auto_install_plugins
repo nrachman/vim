@@ -1,3 +1,5 @@
+#You can copy this into a singularity build def to automatically install nvim and plugins
+
 #Install vim-plug Plugin Manager for Neovim
 
 dest=~/.local/share/nvim/site/autoload/plug.vim
