@@ -1,4 +1,5 @@
-" Vimrc by Nicholas Rachmaninoff, forked from Vimrc by Rohit Farmer
+" Vimrc by Nick Rachmaninoff
+" Forked from Vimrc by Rohit Farmer
 
 " PLUGIN MANAGER
 " For more information https://github.com/junegunn/vim-plug/wiki/tutorial
@@ -15,14 +16,45 @@ call plug#begin('~/.vim/plugged')
 " Github user/repository
 Plug 'scrooloose/nerdtree' 
 Plug 'jalvesaq/Nvim-R'
+Plug 'ncm2/ncm2'
+Plug 'gaalcaras/ncm-R'
 Plug 'davidhalter/jedi-vim'
+Plug 'patstockwell/vim-monokai-tasty'
+" Plug 'elzr/vim-json'
 Plug 'itchyny/lightline.vim'
 Plug 'Raimondi/delimitMate'
+Plug 'jalvesaq/vimcmdline'
+Plug 'danilo-augusto/vim-afterglow'
+" Plug 'ycm-core/YouCompleteMe'
+
+
+" This is needed to have ncm-R working correctly
+" Have to install pynvim in this python version
+" where I have done python3 -m pip install pynvim
+let g:python3_host_prog="/hpcdata/sg/sg_data/users/rachmaninoffn2/tools/miniconda3/envs/R3.6/bin/python3"
+
+
+" assuming you're using vim-plug: https://github.com/junegunn/vim-plug
+Plug 'ncm2/ncm2'
+Plug 'roxma/nvim-yarp'
+
+" enable ncm2 for all buffers
+autocmd BufEnter * call ncm2#enable_for_buffer()
+
+" IMPORTANT: :help Ncm2PopupOpen for more information
+set completeopt=noinsert,menuone,noselect
+
+" NOTE: you need to install completion sources to get completions. Check
+" our wiki page for a list of sources: https://github.com/ncm2/ncm2/wiki
+Plug 'ncm2/ncm2-bufword'
+Plug 'ncm2/ncm2-path'
 
 " To install the plugins in the list above execute :PlugInstall
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
+
+
 
 " SET LEADER
 " With a map leader it's possible to do extra key combinations
@@ -32,8 +64,12 @@ let g:mapleader = ","
 
 " Settings related to external plugins
 " vim-monokai-tasty
-let g:vim_monokai_tasty_italic = 1
-colorscheme vim-monokai-tasty
+" let g:vim_monokai_tasty_italic = 1
+" colorscheme vim-monokai-tasty
+
+" colorscheme
+let g:airline_theme='afterglow'
+colorscheme afterglow
 
 " NERD Tree
 "autocmd vimenter * NERDTree " Always open nerdtree
@@ -128,10 +164,10 @@ if $COLORTERM == 'gnome-terminal'
     set t_Co=256
 endif
 
-try
-    colorscheme desert
-catch
-endtry
+"try
+"    colorscheme desert
+"catch
+"endtry
 
 " Background colour
 " set background=dark     " Use colors that are more suitable for dark background.
@@ -160,7 +196,4 @@ map <leader>tp :tabp<cr>
 " Return to last edit position when opening files (You want this!)
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
-" For nvim-R so that can use R outside of other things. This will also allow me to automatically install nvimcom
-" see https://github.com/jalvesaq/Nvim-R/blob/master/doc/Nvim-R.txt and search Rstart
-command RStart let oldft=&ft | set ft=r | exe 'set ft='.oldft | let b:IsInRCode = function("DefaultIsInRCode") | normal <LocalLeader>rf
 
