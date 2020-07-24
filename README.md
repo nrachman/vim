@@ -12,7 +12,7 @@ wget -O - https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim > 
 ### Clone vim Repository and link Vimrc file
 ```
 cd ~
-git clone https://github.com/rohitfarmer/vim.git .vim
+git clone https://github.com/nrachman/vim.git .vim
 
 mkdir .config/nvim
 
