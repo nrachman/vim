@@ -26,7 +26,13 @@ vim or nvim
 
 :PlugInstall
 ```
+### to get ncm-2 / nmc-r to work
+Change this portion of the ~/.config/nvim/init.vim
 
+31 " This is needed to have ncm-R working correctly
+32 " Have to install pynvim in this python version
+33 " where I have done python3 -m pip install pynvim
+34 let g:python3_host_prog="/Users/rachmaninoffn2/tools/miniconda3/bin/python3.8"
 
 ## Plugins Installed
 
